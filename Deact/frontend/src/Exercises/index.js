@@ -28,10 +28,22 @@ const useStyles = makeStyles(theme => ({
     
   },
 }));
-const Exercises = props =>{ return  <Grid item xs={4} className={useStyles().box}>
-				<ImagePerson/>		
-                </Grid>
 
+const Exercises = props =>{
+	var a=[];
+	var b=[];
+	var c=[];
+	var d=[];
+	var e=[];
+	var temp=[a,b,c,d,e];
+			{props.posts.map((item) => (
+       				temp[Number(item.title)].push(item.content)
+	                         ))} 
+
+		
+			return <Grid item xs={4} className={useStyles().box}>	
+				<ImagePerson user={temp[Number(props.id)]}/>		
+                </Grid>
 	}
 
 
