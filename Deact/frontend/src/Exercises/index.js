@@ -6,30 +6,30 @@ import {makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
 import ImagePerson from './ImagePerson';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles({
   root: {
     flexGrow: 1,
-  },
-  paper: {
-    padding: theme.spacing(100),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
   },
   avatar:{
     margin: 10,
     width: 100,
     height: 100,
   },
+  menuButton: props => ({
+   margin:10,
+   width: 500,
+   height: 500,
+   background: props.BackGroundColor,
+  }),
   box:{
-    background:"orange",
     margin: 10,  
     width: 500,
     height: 500,
-    
+    background: "orange", 
   },
-}));
-
+});
 const Exercises = props =>{
+	var colorArray=["red","orange","green"]
 	var a=[];
 	var b=[];
 	var c=[];
@@ -37,13 +37,17 @@ const Exercises = props =>{
 	var e=[];
 	var temp=[a,b,c,d,e];
 			{props.posts.map((item) => (
-       				temp[Number(item.title)].push(item.content)
+       				temp[Number(item.session)].push(item.imageUrl)
 	                         ))} 
-
-		
-			return <Grid item xs={4} className={useStyles().box}>	
-				<ImagePerson user={temp[Number(props.id)]}/>		
-                </Grid>
+			
+			console.log(temp[2].length)			
+			
+			return(
+                                <Grid item xs={4} className={useStyles({BackGroundColor : colorArray[temp[Number(props.id)].length]}).menuButton}>
+                                       <ImagePerson user={temp[Number(props.id)]}/>
+                                </Grid>
+                                )
+	
 	}
 
 
