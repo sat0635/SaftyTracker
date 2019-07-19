@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 
-class Session1_1(models.Model):
+class Area1(models.Model):
     session = models.CharField(max_length=200)
     imageUrl = models.TextField()
 
