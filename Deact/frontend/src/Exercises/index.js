@@ -40,7 +40,6 @@ const Exercises = props =>{
        				temp[Number(item.session)].push(item.imageUrl)
 	                         ))} 
 			
-			console.log(temp[2].length)			
 			
 			return(
                                 <Grid item xs={4} className={useStyles({BackGroundColor : colorArray[temp[Number(props.id)].length]}).menuButton}>

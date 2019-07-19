@@ -5,7 +5,7 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.ListPost.as_view()),
-    path('<int:pk>/', views.DetailPost.as_view()),
-    path('insert/<para0>/<para1>/<para2>/', views.get_list_by_user),
+    path('insert/<id>/<session>/<image>/', views.insert_user),
+    path('delf/<id>/', views.delete_near_user),
+    path('getNearUser/', views.get_near_user),
 ]

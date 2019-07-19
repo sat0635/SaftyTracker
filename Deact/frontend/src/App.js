@@ -39,14 +39,13 @@ class App  extends Component {
  
    async componentDidMount() {
         try {
-            const res = await fetch('http://34.97.49.139:8000/api/');
+            const res = await fetch('http://34.97.49.139:8000/api/getNearUser/');
             const posts = await res.json();
-	    console.log("check1");
             this.setState({
                 posts
             });
         } catch (e) {
-            console.log("check2");
+            console.log("cannot fetch the REST API");
         }
     }
     render() {
