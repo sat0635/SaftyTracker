@@ -5,7 +5,7 @@ import Paper from '@material-ui/core/Paper';
 import {makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
 import ImagePerson from './ImagePerson';
-
+import Button from '@material-ui/core/Button';
 const useStyles = makeStyles({
   root: {
     flexGrow: 1,
@@ -31,24 +31,8 @@ const useStyles = makeStyles({
 const Exercises = props =>{
 	var colorArray=["white", "red","orange","green"]
 	var colorIndex=0
-	var a=[];
-	var b=[];
-	var c=[];
-	var d=[];
-	var e=[];
-	var f=[];
-	var g=[];
-	var h=[];
-	var a1=[];
-        var b1=[];
-        var c1=[];
-        var d1=[];
-        var e1=[];
-        var f1=[];
-        var g1=[];
-        var h1=[];
-	var temp_url=[a,b,c,d,e,f,g,h];
-	var temp_id=[a1,b1,c1,d1,e1,f1,g1];
+	var temp_url=[[],[],[],[],[],[],[],[]];
+	var temp_id=[[],[],[],[],[],[],[],[]];
 	var dict_state={"good":[], "bad":[]};
                         {
 				props.states.map((item) => (
@@ -80,7 +64,10 @@ const Exercises = props =>{
 			
 			return(
                                 <Grid item xs={4} className={useStyles({BackGroundColor : colorArray[colorIndex]}).menuButton}>
-                                       <ImagePerson user={temp_url[Number(props.session)]}/>
+					<Button size="large" variant="contained" color="secondary">
+        				 	SECTION {props.session}
+     					 </Button>	
+                                       <ImagePerson user={temp_id[Number(props.session)]}/>
                                 </Grid>
                         )
 	
