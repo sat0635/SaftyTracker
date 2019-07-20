@@ -37,22 +37,26 @@ const useStyles = makeStyles(theme => ({
 class App  extends Component {
     state={
         posts:[],
+	states:[],
     };  
     
      async componentDidMount() {
         setInterval(async () => {
         try {
             const res = await fetch('http://34.97.49.139:8000/api/getNearUser/');
+            const res2 = await fetch('http://34.97.49.139:8000/api/getstate/');
             const posts = await res.json();
+            const states = await res2.json();
             this.setState({
-                posts
+                posts,
+		states,
             });
 
         } catch (e) {
             console.log("cannot fetch the REST API");
         }
 
-       }, 5000);
+       }, 1000);
     }
 
     render() {
@@ -60,14 +64,14 @@ class App  extends Component {
        <Grid container spacing={1}>
         <Grid container item xs={12} spacing={1}>
         	<React.Fragment>
-			<Exercises posts={this.state.posts} session='1'/>
-			<Exercises posts={this.state.posts} session='2'/>
+			<Exercises posts={this.state.posts} states={this.state.states} session='1'/>
+			<Exercises posts={this.state.posts} states={this.state.states} session='2'/>
         	</React.Fragment>
         </Grid>
         <Grid container item xs={12} spacing={1}>
         	<React.Fragment>
-			<Exercises posts={this.state.posts} session='3'/>
-			<Exercises posts={this.state.posts} session='4'/>
+			<Exercises posts={this.state.posts} states={this.state.states} session='3'/>
+			<Exercises posts={this.state.posts} states={this.state.states} session='4'/>
         	</React.Fragment>
         </Grid>
       </Grid>

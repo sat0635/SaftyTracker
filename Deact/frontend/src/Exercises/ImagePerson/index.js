@@ -15,9 +15,9 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.text.secondary,
   },
   avatar:{
-    margin: 10,
-    width: 100,
-    height: 100,
+    margin: 5,
+    width: 150,
+    height: 150,
   },
   box:{
     background:"orange",

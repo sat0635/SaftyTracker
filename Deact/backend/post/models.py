@@ -4,6 +4,7 @@ from django.db import models
 
 
 class Area1(models.Model):
+    id = models.IntegerField(primary_key=True)
     session = models.CharField(max_length=200)
     imageUrl = models.TextField()
 
@@ -37,9 +38,7 @@ class Session1_4(models.Model):
 
 
 class User(models.Model):
-    name = models.CharField(max_length=200)
-    imageUrl = models.TextField()
-    
-
+    state = models.CharField(max_length=200)
+    id = models.IntegerField(primary_key=True)
     def __str__(self):
-        return self.name
+        return self.state
