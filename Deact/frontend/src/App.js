@@ -6,6 +6,9 @@ import {makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
 import Exercises from './Exercises';
 
+import ReactDOM from 'react-dom'
+
+
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
@@ -31,41 +34,53 @@ const useStyles = makeStyles(theme => ({
 
 
 
-
 class App  extends Component {
-  state = {
-        posts: [],
-    };
- 
-   async componentDidMount() {
+    state={
+        posts:[],
+    };  
+    
+     async componentDidMount() {
+        setInterval(async () => {
         try {
             const res = await fetch('http://34.97.49.139:8000/api/getNearUser/');
             const posts = await res.json();
             this.setState({
                 posts
             });
+
         } catch (e) {
             console.log("cannot fetch the REST API");
         }
+
+       }, 1000);
     }
+
     render() {
         return   <div>
-      <Grid container spacing={1}>
+       <Grid container spacing={1}>
         <Grid container item xs={12} spacing={1}>
         	<React.Fragment>
-			<Exercises posts={this.state.posts} id='1'/>
-			<Exercises posts={this.state.posts} id='2'/>
+			<Exercises posts={this.state.posts} session='1'/>
+			<Exercises posts={this.state.posts} session='2'/>
         	</React.Fragment>
         </Grid>
         <Grid container item xs={12} spacing={1}>
         	<React.Fragment>
-			<Exercises posts={this.state.posts} id='3'/>
-			<Exercises posts={this.state.posts} id='4'/>
+			<Exercises posts={this.state.posts} session='3'/>
+			<Exercises posts={this.state.posts} session='4'/>
         	</React.Fragment>
         </Grid>
       </Grid>
     </div>
     }
 }
+
+function tick(){
+    ReactDOM.render(
+        <App/>,
+        document.getElementById('root'),
+    );
+}
+setInterval(tick,5000);
 
 export default App;

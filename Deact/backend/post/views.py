@@ -8,8 +8,8 @@ import json
 
 
 
-def insert_near_user(request, id, session, imageurl):
-    instance = Area1(id=id, session=session, imageUrl=("/"+imageurl))
+def insert_near_user(request, userid, session, imageurl):
+    instance = Area1(id=userid, session=session, imageUrl=("/"+imageurl))
     instance.save()
 
 def delete_near_user(request, userid):

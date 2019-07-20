@@ -29,7 +29,7 @@ const useStyles = makeStyles({
   },
 });
 const Exercises = props =>{
-	var colorArray=["red","orange","green"]
+	var colorArray=["red","orange","green","green","green","green"]
 	var a=[];
 	var b=[];
 	var c=[];
@@ -42,8 +42,8 @@ const Exercises = props =>{
 			
 			
 			return(
-                                <Grid item xs={4} className={useStyles({BackGroundColor : colorArray[temp[Number(props.id)].length]}).menuButton}>
-                                       <ImagePerson user={temp[Number(props.id)]}/>
+                                <Grid item xs={4} className={useStyles({BackGroundColor : colorArray[temp[Number(props.session)].length]}).menuButton}>
+                                       <ImagePerson user={temp[Number(props.session)]}/>
                                 </Grid>
                                 )
 	
