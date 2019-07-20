@@ -52,7 +52,7 @@ class App  extends Component {
             console.log("cannot fetch the REST API");
         }
 
-       }, 1000);
+       }, 5000);
     }
 
     render() {
@@ -75,12 +75,5 @@ class App  extends Component {
     }
 }
 
-function tick(){
-    ReactDOM.render(
-        <App/>,
-        document.getElementById('root'),
-    );
-}
-setInterval(tick,5000);
 
 export default App;
