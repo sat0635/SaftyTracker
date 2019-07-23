@@ -4,4 +4,5 @@
 <img width="923" alt="concept1" src="https://user-images.githubusercontent.com/29095448/61172605-8e871780-a5c1-11e9-8f9b-0a28c9508649.png">
 <img width="586" alt="concept2" src="https://user-images.githubusercontent.com/29095448/61172607-90e97180-a5c1-11e9-92d5-6f99c258fe77.png">
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5lTYLHcKNWA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+작품 소개 영상
+https://www.youtube.com/embed/5lTYLHcKNWA
