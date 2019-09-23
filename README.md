@@ -5,7 +5,9 @@
 
 <img width="586" alt="concept2" src="https://user-images.githubusercontent.com/29095448/61172607-90e97180-a5c1-11e9-92d5-6f99c258fe77.png">
 
-<h2>views.py in Django</h2>
+<h2>views.py in Django</h2></br>
+
+
 ```
 //해당 섹션의 라즈베리파이에서 인식된 새로운 사용자의 정보를 API를 통해 받는다.
 //해당 정보는 해당 섹션 테이블에 추가됩으로써 React 웹에서 인식할 수 있게 한다.
