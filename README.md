@@ -12,7 +12,7 @@
 def insert_state_user(request, userid, state):
     instance = User(id=userid, state=state)
     instance.save()
-~~~
+```
 <hr/>
 ~~~
 //React 웹에서 유저의 상태를 보여주기 위해 모든 유저를 리스트에 담아서 보낸다.
@@ -29,7 +29,7 @@ def get_near_user(request):
 
     return JsonResponse(dict_list,safe=False)
 
-~~~
+```
 <hr/>
 <h3>urls.py in Django</h3></br>
 ~~~
@@ -41,7 +41,7 @@ urlpatterns = [
     path('getNearUser/', views.get_near_user),
     path('getstate/', views.get_state_user),
 ]
-~~~
+```
 <hr/>
 
 <img width="586" alt="concept2" src="https://user-images.githubusercontent.com/29095448/61966548-d2d8d580-b00d-11e9-99c1-7a877e48bbf7.PNG">
