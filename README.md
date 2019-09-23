@@ -13,7 +13,7 @@ def insert_state_user(request, userid, state):
     instance = User(id=userid, state=state)
     instance.save()
 ```
-<p></p>
+</br>
 ```
 //React 웹에서 유저의 상태를 보여주기 위해 모든 유저를 리스트에 담아서 보낸다.
 def get_near_user(request):
