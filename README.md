@@ -3,8 +3,10 @@
 아래에 보이는 그림은 전체 작품의 구성도이며 저희가 만든 파트는 SERVER입니다.
 <img width="923" alt="concept1" src="https://user-images.githubusercontent.com/29095448/61172605-8e871780-a5c1-11e9-8f9b-0a28c9508649.png">
 
-
+views.py in Django
 ```
+//해당 섹션의 라즈베리파이에서 인식된 새로운 사용자의 정보를 API를 통해 받는다.
+//해당 정보는 해당 섹션 테이블에 추가됩으로써 React 웹에서 인식할 수 있게 한다.
 def insert_state_user(request, userid, state):
     instance = User(id=userid, state=state)
     instance.save()
