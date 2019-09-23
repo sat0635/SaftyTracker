@@ -5,7 +5,7 @@
 
 <img width="586" alt="concept2" src="https://user-images.githubusercontent.com/29095448/61172607-90e97180-a5c1-11e9-92d5-6f99c258fe77.png">
 
-<h3>views.py in Django</h3></br>
+<h3>views.py in Django</h3><br
 ~~~
 //해당 섹션의 라즈베리파이에서 인식된 새로운 사용자의 정보를 API를 통해 받는다.
 //해당 정보는 해당 섹션 테이블에 추가된다.
@@ -13,7 +13,7 @@ def insert_state_user(request, userid, state):
     instance = User(id=userid, state=state)
     instance.save()
 ~~~
----------------
+<hr/>
 ~~~
 //React 웹에서 유저의 상태를 보여주기 위해 모든 유저를 리스트에 담아서 보낸다.
 def get_near_user(request):
@@ -30,6 +30,7 @@ def get_near_user(request):
     return JsonResponse(dict_list,safe=False)
 
 ~~~
+<hr/>
 <h3>urls.py in Django</h3></br>
 ~~~
 //REST API
@@ -41,6 +42,7 @@ urlpatterns = [
     path('getstate/', views.get_state_user),
 ]
 ~~~
+<hr/>
 
 <img width="586" alt="concept2" src="https://user-images.githubusercontent.com/29095448/61966548-d2d8d580-b00d-11e9-99c1-7a877e48bbf7.PNG">
 
