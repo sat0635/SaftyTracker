@@ -5,7 +5,7 @@
 
 <img width="586" alt="concept2" src="https://user-images.githubusercontent.com/29095448/61172607-90e97180-a5c1-11e9-92d5-6f99c258fe77.png">
 
-<h2>views.py in Django</h2></br>
+<h3>views.py in Django</h3></br>
 
 
 ```
