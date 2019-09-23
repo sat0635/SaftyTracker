@@ -43,7 +43,50 @@ urlpatterns = [
     path('getstate/', views.get_state_user),
 ]
 ~~~
-    
+
+<hr/>
+
+<h3>App.js in React</h3>
+
+~~~
+// 매 초마다 현재 상태를 Django서버로부터 받아온다
+ async componentDidMount() {
+        setInterval(async () => {
+        try {
+            const res = await fetch('http://34.97.49.139:8000/api/getNearUser/');
+            const res2 = await fetch('http://34.97.49.139:8000/api/getstate/');
+            const posts = await res.json();
+            const states = await res2.json();
+            this.setState({
+                posts,
+                states,
+            });
+
+        } catch (e) {
+            console.log("cannot fetch the REST API");
+        }
+
+       }, 1000);
+    }
+~~~
+
+~~~
+//현장을 4개의 섹션으로 나누었기에 4개의 그리드 생성하고 모든 유저의 값을 전달
+<Grid container spacing={1}>
+        <Grid container item xs={12} spacing={1}>
+                <React.Fragment>
+                        <Exercises posts={this.state.posts} states={this.state.states} session='1'/>
+                        <Exercises posts={this.state.posts} states={this.state.states} session='2'/>
+                </React.Fragment>
+        </Grid>
+        <Grid container item xs={12} spacing={1}>
+                <React.Fragment>
+                        <Exercises posts={this.state.posts} states={this.state.states} session='3'/>
+                        <Exercises posts={this.state.posts} states={this.state.states} session='4'/>
+                </React.Fragment>
+        </Grid>
+</Grid>
+~~~
 
 <img width="586" alt="concept2" src="https://user-images.githubusercontent.com/29095448/61966548-d2d8d580-b00d-11e9-99c1-7a877e48bbf7.PNG">
 
