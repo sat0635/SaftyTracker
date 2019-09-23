@@ -3,6 +3,14 @@
 아래에 보이는 그림은 전체 작품의 구성도이며 저희가 만든 파트는 SERVER입니다.
 <img width="923" alt="concept1" src="https://user-images.githubusercontent.com/29095448/61172605-8e871780-a5c1-11e9-8f9b-0a28c9508649.png">
 
+
+'''
+def insert_state_user(request, userid, state):
+    instance = User(id=userid, state=state)
+    instance.save()
+'''
+
+
 <img width="586" alt="concept2" src="https://user-images.githubusercontent.com/29095448/61172607-90e97180-a5c1-11e9-92d5-6f99c258fe77.png">
 
 <img width="586" alt="concept2" src="https://user-images.githubusercontent.com/29095448/61966548-d2d8d580-b00d-11e9-99c1-7a877e48bbf7.PNG">
