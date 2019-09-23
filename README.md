@@ -4,11 +4,11 @@
 <img width="923" alt="concept1" src="https://user-images.githubusercontent.com/29095448/61172605-8e871780-a5c1-11e9-8f9b-0a28c9508649.png">
 
 
-'''
+```
 def insert_state_user(request, userid, state):
     instance = User(id=userid, state=state)
     instance.save()
-'''
+```
 
 
 <img width="586" alt="concept2" src="https://user-images.githubusercontent.com/29095448/61172607-90e97180-a5c1-11e9-92d5-6f99c258fe77.png">
