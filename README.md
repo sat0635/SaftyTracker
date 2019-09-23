@@ -19,3 +19,5 @@
 
 작품 소개 영상
 https://www.youtube.com/embed/5lTYLHcKNWA
+
+<img width="586" alt="concept2" src="https://user-images.githubusercontent.com/29095448/65398008-7e748b00-ddef-11e9-81e8-30ed01e9945b.jpg">
