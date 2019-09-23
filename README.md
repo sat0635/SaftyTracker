@@ -6,7 +6,6 @@
 <img width="586" alt="concept2" src="https://user-images.githubusercontent.com/29095448/61172607-90e97180-a5c1-11e9-92d5-6f99c258fe77.png">
 
 <h3>views.py in Django</h3></br>
-<p>
 ```
 //해당 섹션의 라즈베리파이에서 인식된 새로운 사용자의 정보를 API를 통해 받는다.
 //해당 정보는 해당 섹션 테이블에 추가된다.
@@ -31,7 +30,6 @@ def get_near_user(request):
 
 ```
 <h3>urls.py in Django</h3></br>
-<p>
 ```
 //REST API
 urlpatterns = [
