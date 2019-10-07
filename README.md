@@ -9,7 +9,7 @@
 
 ~~~
 //해당 섹션의 라즈베리파이에서 인식된 새로운 사용자의 정보를 API를 통해 받는다.
-//해당 정보는 해당 섹션 테이블에 추가된다.
+//해당 정보는 해당 데이터베이스의 섹션 테이블에 추가된다.
 def insert_state_user(request, userid, state):
     instance = User(id=userid, state=state)
     instance.save()
